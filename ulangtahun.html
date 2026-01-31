@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun ❤️</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+    .card {
+      background: white;
+      max-width: 420px;
+      width: 90%;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease;
+    }
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 0;
+      font-weight: normal;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .heart {
+      font-size: 40px;
+      animation: beat 1s infinite;
+      margin: 15px 0;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background: #e63e5c;
+    }
+    .hidden {
+      display: none;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Selamat Ulang Tahun 🎉</h1>
+    <h2>2 Februari 2026</h2>
+    <div class="heart">❤️</div>
+    <p id="shortMsg">
+      Hari ini hari spesial kamu. Semoga semua impianmu perlahan jadi nyata ✨
+    </p>
+    <button onclick="showMessage()">Klik pesan spesial 💌</button>
+    <p id="longMsg" class="hidden">
+      Terima kasih sudah hadir dan membuat hari-hariku lebih berwarna. 
+      Semoga di usia baru ini kamu selalu sehat, bahagia, dan dikelilingi hal-hal baik.
+      Jangan lupa tersenyum hari ini, karena kamu sangat berarti 💖
+    </p>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('longMsg').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
